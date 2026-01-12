@@ -1,7 +1,7 @@
 // Import React for building the component
 import React from 'react';
 // Import star icons from React Icons (FaStar is a solid star icon)
-import { FaStar } from 'react-icons/fa';
+import { IoMdStar } from "react-icons/io";
 
 // Define the TypeScript interface for the component's props
 // In layman's terms: This tells TypeScript what props the component expects (starRateNumber as a number)
@@ -18,15 +18,15 @@ const StarRates: React.FC<StarRatesProps> = ({ starRateNumber }) => {
   return (
     // Use flex-row for horizontal layout with Tailwind
     // In layman's terms: This div lines up the stars side by side with a bit of space between them
-    <div className="flex flex-row space-x-1">
+    <div className="flex flex-row justify-center">
       {stars.map((star) => (
         // For each star, render the FaStar icon
         // Color it yellow if the star's position <= starRateNumber, else gray
         // In layman's terms: If this star's number is within the rating, make it yellow; otherwise, gray
-        <FaStar
+        <IoMdStar
           key={star}  // Unique key for React's list rendering
           className={star <= starRateNumber ? 'text-yellow-500' : 'text-gray-300'}  // Tailwind classes for colors
-          size={24}  // Size of the icon (adjust as needed)
+          size={55}  // Size of the icon (adjust as needed)
         />
       ))}
     </div>
