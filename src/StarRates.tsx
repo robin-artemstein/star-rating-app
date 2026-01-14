@@ -4,7 +4,7 @@
 // Based on the prop, it fills the leftmost stars with solid stars (<IoMdStar />) and the rest with outline stars (<IoIosStarOutline />).
 // We use a loop with if-else to decide which icon to use for each star, as required (no ternary operators).
 
-import { IoMdStar, IoIosStarOutline } from 'react-icons/io'; // Import the star icons from React Icons.
+import { FaStar, FaRegStar } from "react-icons/fa"; // Import the star icons from React Icons.
 
 // Define the props interface for TypeScript type safety.
 // starRateNumber should be a number between 1 and 5.
@@ -21,10 +21,10 @@ const StarRates: React.FC<StarRatesProps> = ({ starRateNumber }) => {
     // Check if the current star position is less than or equal to the starRateNumber.
     if (i <= starRateNumber) {
       // If yes, add a filled star icon.
-      stars.push(<IoMdStar key={i} className="text-yellow-500 w-6 h-6" />);
+      stars.push(<FaStar key={i} className="text-blue-700 w-6 h-6 p-1" />);
     } else {
       // If not, add an outline star icon.
-      stars.push(<IoIosStarOutline key={i} className="text-yellow-500 w-6 h-6" />);
+      stars.push(<FaRegStar key={i} className="text-blue-700 w-6 h-6 p-1" />);
     }
   }
 

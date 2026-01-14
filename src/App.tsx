@@ -8,7 +8,6 @@ import './App.css'
 function App() {
   // This is just a demo state to hold the star rating number (1 to 5)
   // In a real app, this could come from props, API, or user input
-  const starRateNumber = 2// Example: Set to 3 for demo
 
   return (
     // Use Tailwind classes for centering and layout
@@ -19,13 +18,13 @@ function App() {
       
       {/* Use the StarRates component and pass the prop */}
       {/* In layman's terms: This shows the star rating based on the number we pass */}
-      <div className="flex justify-center">
-        <div><StarRates starRateNumber={starRateNumber} /></div>
-      </div>
+      <StarRates starRateNumber={3} />
+      <StarRates starRateNumber={5} />
+      <StarRates starRateNumber={1} />
       
       {/* Optional counter demo from Vite (you can remove this) */}
       <div className="text-center mt-8">
-        <p className="text-lg text-black">The rating score is {starRateNumber}.</p>
+        <p className="text-lg text-black">As you can see...</p>
       </div>
     </div>
   )
