@@ -1,6 +1,7 @@
 // Import global CSS (not needed here since it's in main.tsx)
 // Import the custom StarRates component
 import StarRates from './StarRates.tsx'
+import CountingText from './CountingText.tsx'
 // Import App-specific CSS if needed (optional)
 import './App.css'
 
@@ -15,7 +16,9 @@ function App() {
             
       {/* Heading with Tailwind styles */}
       <h1 className="text-4xl font-bold text-blue-700 mb-4">React star rating app</h1>
-      
+
+      {/* Counting text box*/}
+      <CountingText/>
       {/* Use the StarRates component and pass the prop */}
       {/* In layman's terms: This shows the star rating based on the number we pass */}
       <StarRates starRateNumber={3} />
